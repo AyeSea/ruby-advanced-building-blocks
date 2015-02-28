@@ -80,7 +80,7 @@ module Enumerable
 			self.my_each{|item| new_arr << proc_var.call(yield(item))}
 		elsif proc_var
 			self.my_each{|item| new_arr << proc_var.call(item)}
-		else
+		elsif block_given?
 			self.my_each{|item| new_arr << yield(item)}
 		end
 
